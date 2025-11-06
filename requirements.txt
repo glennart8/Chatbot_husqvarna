@@ -16,3 +16,6 @@ streamlit==1.25.0
 
 # Hjälpbibliotek
 numpy==1.26.0
+
+load_dotenv
+langchain-openai
