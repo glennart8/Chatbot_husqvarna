@@ -1,0 +1,28 @@
+# FastAPI och ASGI server
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+pydantic-settings>=2.1.0
+
+# LangChain och LLM
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-huggingface>=0.0.1
+langchain-core>=0.1.0
+
+# Vektordatabas
+faiss-cpu>=1.7.0
+
+# Transformers och embeddings
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# Hjälpbibliotek
+numpy>=1.24.0
+
+# Miljövariabler
+python-dotenv>=1.0.0
+
+# Logging och validering
+python-multipart>=0.0.6

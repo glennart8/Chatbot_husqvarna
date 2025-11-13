@@ -1,0 +1,39 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: husqvarna-chatbot-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mappa data och faiss_index från projektrot till container
+      - ./data:/code/data:ro
+      - ./faiss_index:/code/faiss_index:ro
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: husqvarna-chatbot-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    env_file:
+      - .env
+
+networks:
+  default:
+    name: husqvarna-chatbot-network
