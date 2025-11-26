@@ -231,3 +231,15 @@ models/
 *.pth
 *.ckpt
 checkpoint/
+
+# Claude Code
+.claude/
+
+# Installers (stora filer)
+*.msi
+*.exe
+*.dmg
+
+# Package lock files (kan genereras)
+package-lock.json
+frontend/package-lock.json

@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.6.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "axios": "^1.6.5"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.48",
@@ -27,6 +27,6 @@
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "vite": "^7.2.2"
   }
 }
